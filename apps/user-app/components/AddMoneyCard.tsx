@@ -4,7 +4,7 @@ import { Card } from "@repo/ui/card";
 import { Select } from "@repo/ui/select";
 import { TextInput } from "@repo/ui/textinput";
 import { useState } from "react";
-import createOnRampTransaction from "../app/lib/createOnRamptxn";
+import createOnRampTransaction from "../app/lib/actions/createOnRamptxn";
 
 const SUPPORTED_BANKS = [{
     name: "HDFC Bank",
