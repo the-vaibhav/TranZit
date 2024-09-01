@@ -28,4 +28,4 @@ jobs:
         tags: patilxop/tranzit:latest  # Replace with your Docker Hub username and repository
 
     - name: Verify Pushed Image
-      run: docker pull patilxop/tranzit :latest  # Replace with your Docker Hub username and repository
+      run: docker pull patilxop/tranzit:latest  # Replace with your Docker Hub username and repository
