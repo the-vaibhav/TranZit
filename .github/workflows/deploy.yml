@@ -42,6 +42,6 @@ jobs:
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           sudo docker pull patilxop/tranzit:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name web-app -p 3005:3000 100xdevs/web-app:latest
+          sudo docker stop tranzit || true
+          sudo docker rm tranzit || true
+          sudo docker run -d --name tranzit -p 3005:3000 patilxop/tranzit:latest
