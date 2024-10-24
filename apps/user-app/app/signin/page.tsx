@@ -36,9 +36,27 @@ export default function SignIn() {
         router.push('/dashboard');
     }
 
-    return <>
-        <input onChange={handleInputChange} type="number" placeholder='Enter Your Phone number' />
-        <input onChange={handleInputChange} type="password" placeholder='Enter Your Password' />
-        <button className='p-10' onClick={handleSignInWithEmail}></button>
-    </>
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <input
+                onChange={handleInputChange}
+                type="number"
+                placeholder="Enter Your Phone number"
+                className="mb-4 p-3 w-80 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }} // Custom CSS to hide spinners
+            />
+            <input
+                onChange={handleInputChange}
+                type="password"
+                placeholder="Enter Your Password"
+                className="mb-4 p-3 w-80 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+                className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onClick={handleSignInWithEmail}
+            >
+                Sign In
+            </button>
+        </div>
+    )
 }
