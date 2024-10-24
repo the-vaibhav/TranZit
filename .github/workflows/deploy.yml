@@ -44,4 +44,8 @@ jobs:
           sudo docker pull patilxop/tranzit:latest
           sudo docker stop tranzit || true
           sudo docker rm tranzit || true
-          sudo docker run -d --name tranzit -p 3005:3000 patilxop/tranzit:latest
+          sudo docker run -d --name tranzit -p 3005:3000 \
+          -e DATABASE_URL=${{ secrets.DB_URL }} \
+          -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
+          -e NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }} \
+          patilxop/tranzit:latest
