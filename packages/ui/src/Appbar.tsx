@@ -14,7 +14,7 @@ export const Appbar = ({
     onSignin,
     onSignout
 }: AppbarProps) => {
-    return <div className="flex justify-between border-b px-4 border-slate-300">
+    return <div className="flex  bg-gradient-to-br from-gray-900 to-gray-800 justify-between border-b px-4 border-slate-300">
         <div className="text-lg flex flex-col justify-center">
             TranzIt
         </div>
