@@ -6,11 +6,10 @@ import Wrapper from "./global/wrapper";
 
 import Companies from "./marketing/companies";
 import Connect from "./marketing/connect";
-import Footer from "./marketing/footer";
 import Hero from "./marketing/hero";
 import Navbar from "./marketing/navbar";
 export {
-    Background, Companies, Connect, Container, Footer, Hero, Icons,
+    Background, Companies, Connect, Container, Hero, Icons,
     Images, Navbar, Wrapper
 };
 
