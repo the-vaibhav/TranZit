@@ -82,7 +82,7 @@ const Navbar = () => {
                     asChild
                     className="hover:translate-y-0 hover:scale-100"
                   >
-                    <Link href="/auth/signin">Login</Link>
+                    <Link href="/signin">Login</Link>
                   </Button>
                   <Button
                     size="sm"
@@ -90,7 +90,7 @@ const Navbar = () => {
                     asChild
                     className="hidden sm:flex"
                   >
-                    <Link href="/auth/signup">
+                    <Link href="/signin">
                       Start for free
                       <ArrowRightIcon className="w-4 h-4 ml-2 hidden lg:block" />
                     </Link>
