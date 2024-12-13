@@ -2,6 +2,8 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Eye, EyeOff, Lock, Phone } from 'lucide-react'
+import { signIn } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { Button } from "../../../components/auth/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../../components/auth/card"
@@ -9,6 +11,7 @@ import { Input } from "../../../components/auth/input"
 import { Label } from "../../../components/auth/label"
 
 export default function AnimatedSignIn() {
+  const router = useRouter();
   const [phoneNumber, setPhoneNumber] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -24,14 +27,18 @@ export default function AnimatedSignIn() {
     setError('')
   }
 
-  const handleSignInWithEmail = () => {
-    if (!phoneNumber || !password) {
-      setError('Please fill in all fields')
-      return
+  const handleSignInWithEmail = async () => {
+        const response = await signIn('credentials', {
+            phone: phoneNumber,
+            password: password,
+            redirect: false,
+            callbackUrl: '/dashboard'
+        })
+        if (response?.error) {
+            console.log(response.error)
+        }
+        router.push('/dashboard');
     }
-    // Add your sign-in logic here
-    console.log('Signing in with:', phoneNumber, password)
-  }
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)

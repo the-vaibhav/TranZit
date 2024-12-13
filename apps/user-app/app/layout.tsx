@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-// import { AppbarClient } from "../components/AppbarClient";
 import { Providers } from "../provider";
 import "./globals.css";
 
@@ -20,10 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={inter.className}>
-          <div className="min-h-screen bg-background text-foreground antialiased">
-            {/* <AppbarClient /> */}
             {children}
-          </div>
         </body>
       </Providers>
     </html>
