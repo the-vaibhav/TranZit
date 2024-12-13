@@ -118,9 +118,9 @@ const Navbar = () => {
                     <path
                       d="M1 9H15M1 1H15"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 )}
